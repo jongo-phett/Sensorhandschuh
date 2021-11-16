@@ -18,23 +18,23 @@ void loop()
 
   daumen = analogRead(0);
   Serial.print(daumen);
-  Serial.print("\t");
+  Serial.print(",");
 
   zeigerfinger = analogRead(1);
   Serial.print(zeigerfinger);
-  Serial.print("\t");
+  Serial.print(",");
 
   mittelfinger = analogRead(2);
   Serial.print(mittelfinger);
-  Serial.print("\t");
+  Serial.print(",");
 
   ringfinger = analogRead(3);
   Serial.print(ringfinger);
-  Serial.print("\t");
+  Serial.print(",");
 
   kleinfinger = analogRead(4);
   Serial.print(kleinfinger);
-  Serial.println("\t");
+  Serial.println(",");
 
 
 }
