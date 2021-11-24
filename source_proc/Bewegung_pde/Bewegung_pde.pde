@@ -6,7 +6,7 @@ int[] int_werte = {0,0,0,0,0};
 void setup()  {
   size(1920, 1080, P3D);
   strokeWeight(4);
-  port = new Serial(this,"COM3",9600);
+  port = new Serial(this,"COM69",9600);
   port.bufferUntil('\n');
 }
 
