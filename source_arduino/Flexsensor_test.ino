@@ -10,7 +10,7 @@ void setup()
 void loop()
 {
   int daumen;
-  int zeigerfinger;
+  int zeigefinger;
   int mittelfinger;
   int ringfinger;
   int kleinfinger;
@@ -20,8 +20,8 @@ void loop()
   Serial.print(daumen);
   Serial.print(",");
 
-  zeigerfinger = analogRead(1);
-  Serial.print(zeigerfinger);
+  zeigefinger = analogRead(1);
+  Serial.print(zeigefinger);
   Serial.print(",");
 
   mittelfinger = analogRead(2);
