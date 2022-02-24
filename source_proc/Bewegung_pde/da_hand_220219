@@ -9,7 +9,7 @@ void setup()  {
   frameRate(120);
   colorMode(RGB, 10, 10, 10);
   c = color(10, 10, 10);
-  port = new Serial(this,"COM4",9600);
+  port = new Serial(this,"COM13",9600);
   port.bufferUntil('\n');
 }
 
@@ -25,18 +25,18 @@ void serialEvent(Serial port)  {
  printArray(fingerWinkel2); //Zeigt alle Winkeln des Fingers an.
  
 if(werte.length == 11)  {
-  fingerWinkel1[0] = (int(werte[0])-333) * 0.5;
-  fingerWinkel1[1] = int(werte[2]) * 0.1;
-  fingerWinkel1[2] = int(werte[4]) * 0.1;
-  fingerWinkel1[3] = int(werte[6]) * 0.1;
-  fingerWinkel1[4] = int(werte[8]) * 0.1;
+  fingerWinkel1[0] = (int(werte[0])-478) * 0.5;
+  fingerWinkel1[1] = (int(werte[2])-478) * 0.4;
+  fingerWinkel1[2] = (int(werte[4])-348) * 0.4;
+  fingerWinkel1[3] = (int(werte[6])-401) * 0.4;
+  fingerWinkel1[4] = (int(werte[8])-345) * 0.4;
   //println(fingerWinkel1[0]);
   
-  fingerWinkel2[0] = (int(werte[1])-356)* 0.5;
-  fingerWinkel2[1] = int(werte[3]) * 0.1;
-  fingerWinkel2[2] = int(werte[5]) * 0.1;
-  fingerWinkel2[3] = int(werte[7]) * 0.1;
-  fingerWinkel2[4] = int(werte[9]) * 0.1;
+  fingerWinkel2[0] = (int(werte[1])-356) * 0.4;
+  fingerWinkel2[1] = (int(werte[3])-387) * 0.35;
+  fingerWinkel2[2] = (int(werte[5])-392) * 0.3;
+  fingerWinkel2[3] = (int(werte[7])-395) * 0.3;
+  fingerWinkel2[4] = (int(werte[9])-338) * 0.3;
  // println(fingerWinkel2[0]);
 }
  
