@@ -1,0 +1,78 @@
+void setup()
+{
+  //hier sind die einzelnen verwendenten Eingänge von A0-A9
+  pinMode(A0, INPUT);
+  pinMode(A1, INPUT);
+  pinMode(A2, INPUT);
+  pinMode(A3, INPUT);
+  pinMode(A4, INPUT);
+  pinMode(A5, INPUT);
+  pinMode(A6, INPUT);
+  pinMode(A7, INPUT);
+  pinMode(A8, INPUT);
+  pinMode(A9, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  //Parameter für die einzelnen Knöcheln
+  int daumen1;            
+  int daumen2;
+  int zeigefinger1;
+  int zeigefinger2;
+  int mittelfinger1;
+  int mittelfinger2;
+  int ringfinger1;
+  int ringfinger2;
+  int kleinerfinger1;
+  int kleinerfinger2;
+
+
+  //die drei Knöcheln beim Daumen werden die Werte Ausgegeben
+  daumen1 = analogRead(0);          // Der Wert ist die Ausgabe des Analogen Pins
+  Serial.print(daumen1 );           // Werte von dem ersten Flexsensor
+  Serial.print('\t');
+
+  daumen2 = analogRead(1);            // Der Wert ist die Ausgabe des Analogen Pins
+  Serial.print(daumen2);              // Werte von dem Zweiten Flexsensor
+  Serial.print('\t'); 
+  
+  //die drei Knöcheln beim Zeigefinger werden die Werte Ausgegeben
+  zeigefinger1 = analogRead(2);      //Der Wert ist die Ausgabe des Analogen Pins
+  Serial.print(zeigefinger1);        // Werte von dem dritten Flexsensor
+  Serial.print('\t');
+
+  zeigefinger2 = analogRead(3);     // Der Wert ist die Ausgabe des Analogen Pins
+  Serial.print(zeigefinger2);       // Werte von dem Vierten Flexsensor
+  Serial.print('\t');
+
+  //die drei Knöcheln beim Mittelfinger werden die Werte Ausgegeben
+  mittelfinger1 = analogRead(4);    // Der Wert ist die Ausgabe des Analogen Pins
+  Serial.print(mittelfinger1);      // Werte von dem fünften Flexsensor
+  Serial.print('\t');
+ 
+  mittelfinger2 = analogRead(5);    // Der Wert ist die Ausgabe des Analogen Pins
+  Serial.print(mittelfinger2);      // Werte von dem sechsten Flexsensor
+  Serial.print('\t');
+
+
+  //die drei Knöcheln beim Ringfinger werden die Werte Ausgegeben
+  ringfinger1 =analogRead(6);       // Der Wert ist die Ausgabe des Analogen Pins
+  Serial.print(ringfinger1);        // Werte von dem siebten Flexsensor
+  Serial.print('\t');
+
+  ringfinger2 =analogRead(7);       //Der Wert ist die Ausgabe des Analogen Pins
+  Serial.print(ringfinger2);        // Werte von dem achten Flexsensor
+  Serial.print('\t');
+
+  //die drei Knöcheln beim kleinen Finger werden die Werte Ausgegeben
+  kleinerfinger1 = analogRead(8);   //Der Wert ist die Ausgabe des Analogen Pins
+  Serial.print(kleinerfinger1);     // Werte von dem neunten Flexsensor
+  Serial.print('\t');             
+
+  kleinerfinger2 = analogRead(9);   //Der Wert ist die Ausgabe des Analogen Pins
+  Serial.print(kleinerfinger2);     // Werte von dem zenten Flexsensor
+  Serial.println('\t');
+
+}
